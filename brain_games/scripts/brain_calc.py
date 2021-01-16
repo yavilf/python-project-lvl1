@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
-from brain_games.games.cli import welcome_user
+from brain_games.games import calc
 
 
 def main():
     print('Welcome to the Brain Games!')
-    welcome_user()
+    calc.calc_game()
 
 
 if __name__ == '__main__':

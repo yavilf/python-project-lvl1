@@ -9,3 +9,6 @@
 
 ### Brain-even gameplay
 [![asciicast](https://asciinema.org/a/wat51iM9yy5OhRvFU3flwrGPE.svg)](https://asciinema.org/a/wat51iM9yy5OhRvFU3flwrGPE)
+
+### Brain-calc gameplay
+[![asciicast](https://asciinema.org/a/N1cGJNFdPa9Gv699GPmyzS9gG.svg)](https://asciinema.org/a/N1cGJNFdPa9Gv699GPmyzS9gG)
