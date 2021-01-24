@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import prompt
-from random import randint, choice
+from random import randint
 
 
 def get_name():
@@ -8,25 +8,27 @@ def get_name():
     return name
 
 
-def calc_game():
+def is_prime(number):
+    for i in range(number):
+        if i > 1:
+            if number % i == 0:
+                return 'no'
+
+    return 'yes'
+
+
+def prime_game():
     name = get_name()
-    print('What is the result of the expression?')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     quantity_of_rounds = 3
     while quantity_of_rounds != 0:
-        number_1 = randint(1, 99)
-        number_2 = randint(1, 99)
-        sign = choice('+-*')
-        print('Question: {} {} {}'.format(number_1, sign, number_2))
+        number = randint(1, 99)
+        print('Question: {}'.format(number))
         answer = prompt.string('Your answer: ')
-
-        if sign == '+':
-            check = number_1 + number_2
-        elif sign == '-':
-            check = number_1 - number_2
+        if is_prime(number) == 'yes':
+            check = 'yes'
         else:
-            check = number_1 * number_2
-
-        check = str(check)
+            check = 'no'
 
         if answer == check:
             print('Correct!')

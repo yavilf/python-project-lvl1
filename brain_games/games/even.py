@@ -33,5 +33,6 @@ def even_game():
                   "Correct answer was '{}'".format(answer, check))
             print("Let's try again, {}!".format(name))
             break
+
     if quantity_of_rounds == 0:
         print('Congratulations, {}!'.format(name))

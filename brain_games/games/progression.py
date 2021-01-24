@@ -38,7 +38,9 @@ def progression_game():
         print()
         answer = prompt.string('Your answer: ')
 
-        if answer == str(check):
+        check = str(check)
+
+        if answer == check:
             print('Correct!')
             quantity_of_rounds -= 1
         else:

@@ -40,7 +40,9 @@ def gcd_game():
         answer = prompt.string('Your answer: ')
         check = gcd(number_1, number_2)
 
-        if answer == str(check):
+        check = str(check)
+
+        if answer == check:
             print('Correct!')
             quantity_of_rounds -= 1
         else:
