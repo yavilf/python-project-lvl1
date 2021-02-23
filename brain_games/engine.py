@@ -21,7 +21,7 @@ def engine(game):
             quantity_of_rounds -= 1
         else:
             print("'{}', is wrong answer ;(. "
-                  "Correct answer was '{}'".format(answer, check))
+                  "Correct answer was '{}'.".format(answer, check))
             print("Let's try again, {}!".format(name))
             return
 
