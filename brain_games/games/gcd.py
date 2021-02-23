@@ -5,24 +5,13 @@ DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def gcd(number_1, number_2):
-    if number_1 > number_2:
-        while number_1 != 0 or number_2 != 0:
-            number_1 = number_1 % number_2
-            if number_1 == 0:
-                return number_2
-            number_2 = number_2 % number_1
-            if number_2 == 0:
-                return number_1
-    elif number_2 > number_1:
-        while number_1 != 0 or number_2 != 0:
-            number_2 = number_2 % number_1
-            if number_2 == 0:
-                return number_1
-            number_1 = number_1 % number_2
-            if number_1 == 0:
-                return number_2
-    else:
-        return number_1
+    while number_1 != 0 and number_2 != 0:
+        if number_1 > number_2:
+            number_1 %= number_2
+        else:
+            number_2 %= number_1
+        result = number_1 + number_2
+    return result
 
 
 def game_body():
