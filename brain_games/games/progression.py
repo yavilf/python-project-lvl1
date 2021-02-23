@@ -1,11 +1,7 @@
 #!/usr/bin/env python
-import prompt
 from random import randint
 
-
-def get_name():
-    name = prompt.string('May I have your name? ')
-    return name
+DESCRIPTION = 'What number is missing in the progression?'
 
 
 def get_progression():
@@ -19,35 +15,15 @@ def get_progression():
     return progression
 
 
-def progression_game():
-    name = get_name()
-    print('What number is missing in the progression?')
-    quantity_of_rounds = 3
-    while quantity_of_rounds != 0:
-        progression = get_progression()
-        secret_number = randint(1, len(progression) - 1)
-        check = progression[secret_number]
+def game_body():
+    progression = get_progression()
+    secret_number = randint(1, len(progression) - 1)
+    check = progression[secret_number]
 
-        for i in range(len(progression)):
-            if i == secret_number:
-                progression[i] = '..'
+    progression[secret_number] = '..'
 
-        print('Question:', end='\t')
-        for i in progression:
-            print(i, end='\t')
-        print()
-        answer = prompt.string('Your answer: ')
+    question = 'Question:'
+    for i in progression:
+        question += ' ' + str(i)
 
-        check = str(check)
-
-        if answer == check:
-            print('Correct!')
-            quantity_of_rounds -= 1
-        else:
-            print("'{}', is wrong answer ;(. "
-                  "Correct answer was '{}'".format(answer, check))
-            print("Let's try again, {}!".format(name))
-            break
-
-    if quantity_of_rounds == 0:
-        print('Congratulations, {}!'.format(name))
+    return str(check), question

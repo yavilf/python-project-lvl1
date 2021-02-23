@@ -1,11 +1,7 @@
 #!/usr/bin/env python
-import prompt
 from random import randint
 
-
-def get_name():
-    name = prompt.string('May I have your name? ')
-    return name
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def gcd(number_1, number_2):
@@ -29,27 +25,10 @@ def gcd(number_1, number_2):
         return number_1
 
 
-def gcd_game():
-    name = get_name()
-    print('Find the greatest common divisor of given numbers.')
-    quantity_of_rounds = 3
-    while quantity_of_rounds != 0:
-        number_1 = randint(1, 99)
-        number_2 = randint(1, 99)
-        print('Question: {} {}'.format(number_1, number_2))
-        answer = prompt.string('Your answer: ')
-        check = gcd(number_1, number_2)
+def game_body():
+    number_1 = randint(1, 99)
+    number_2 = randint(1, 99)
+    question = 'Question: {} {}'.format(number_1, number_2)
+    check = gcd(number_1, number_2)
 
-        check = str(check)
-
-        if answer == check:
-            print('Correct!')
-            quantity_of_rounds -= 1
-        else:
-            print("'{}', is wrong answer ;(. "
-                  "Correct answer was '{}'".format(answer, check))
-            print("Let's try again, {}!".format(name))
-            break
-
-    if quantity_of_rounds == 0:
-        print('Congratulations, {}!'.format(name))
+    return str(check), question
