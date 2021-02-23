@@ -8,6 +8,9 @@
 [![Github Actions Status](https://github.com/yavilf/python-project-lvl1/workflows/linter-check/badge.svg)](https://github.com/yavilf/python-project-lvl1/actions?query=workflow%3Alinter-check)
 
 Welcome to brain games! This 5 games developed for training your brain with simple mathematical examples. Try to solve it or just answer "yes" or "no" as fast as possible!
+
+For install games use 'make package-install'.
+
 For run games use one of the commands:
 
 - "brain-calc"
