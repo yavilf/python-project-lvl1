@@ -10,8 +10,7 @@ def gcd(number_1, number_2):
             number_1 %= number_2
         else:
             number_2 %= number_1
-        result = number_1 + number_2
-    return result
+    return number_1 + number_2
 
 
 def game_body():
